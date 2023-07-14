@@ -1,25 +1,34 @@
 @charset "UTF-8";
 
 :root {
-  /* color */
+  /* 色
+  ************************/
   --col-white: #fff;
   --col-gray: #f0f0f0;
   --col-black: #000;
   --col-black-tra: #00000033;
   --col-mian: #8daab6;
   --col-second: #b0c7d1;
-  --col-md-nav-hover: #ffffff33;
+  --col-second-hover: #c2dde9;
 
-  /* shadow */
+  /* 影
+  ************************/
   --box-shadow: 0 0px 20px #00000033;
 
-  /* border */
+  /* 線
+  ************************/
   --border-black: 1px solid #000;
   --border: 1px solid #00000033;
   --border-gray: 1px solid #f0f0f0;
   --border-white: 1px solid #ffffff;
 
-  /* font-size */
+  /* マージン
+  ************************/
+  --mb-contents: 2rem;
+  --mb-container: 1rem;
+
+  /* フォントサイズ
+  ************************/
   --fs-h1: 2rem;
   --fs-h2: 2rem;
   --fs-mb-h2: 1.5rem;
@@ -30,11 +39,8 @@
   --fs-appliances: 1rem;
   --fs-appliances-price: 1.3rem;
 
-  /* margin-bottom */
-  --mb-contents: 2rem;
-  --mb-container: 1rem;
-
-  /* width */
+  /* サイズ
+  ************************/
   --wd-body: 1200px;
   --wd-main-container: 80%;
   --wd-nav: 200px;
@@ -43,7 +49,7 @@
   --wd-tab-category-btn: 200px;
   --wd-mb-category-btn: 200px;
   --wd-genre-header: 130px;
-  /* height */
+
   --hi-header: 70px;
   --hi-nav: 50px;
   --hi-mb-company-nav: 100px;
@@ -54,9 +60,18 @@
   --hi-search-box: 35px;
   --hi-appliances-header: 150px;
 
+  /* スライダー */
+  --wi-indicator-btn: 4rem;
+  --hi-indicator-btn: 3rem;
+
+  /* ページトップ */
   --size-pagetop: 5rem;
 
-  /* バナーサイズ */
+  /* バナーサイズ
+  ************************/
+  /* スライダーの横幅はbodyと一緒 */
+  --bn-hi-slider: 628px;
+
   --bn-wd-rectangle: 336px;
   --bn-hi-rectangle: 280px;
 
@@ -64,7 +79,6 @@
   --bn-tb-wd-nav: 320px;
   --bn-mb-wd-nav: 200px;
   --bn-hi-nav: 50px;
-
 }
 
 header .company,

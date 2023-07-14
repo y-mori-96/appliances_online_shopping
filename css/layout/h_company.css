@@ -136,10 +136,11 @@ header h1 a {
 
   .company_nav ul li a {
     color: #fff;
+    width: 100%;
   }
 
   .company_nav ul li a:hover {
-    background-color: var(--col-md-nav-hover);
+    background-color: var(--col-second-hover);
   }
 
   .hamburger {

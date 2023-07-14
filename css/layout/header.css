@@ -24,9 +24,3 @@
   width: var(--bn-mb-wd-nav);
   height: var(--bn-hi-nav);
 }
-
-@media screen and (max-width: 559px) {
-  /* .free_shipping img {
-    width: 100%;
-  } */
-}

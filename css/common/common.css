@@ -50,10 +50,11 @@
   --hi-genre-li: 70px;
   --hi-genre-button: 35px;
   --hi-genre-display: 500px;
-  /* --hi-genre-hide: calc(-486px ); */
   /* カテゴリの高さ - ヘッダーの高さ */
   --hi-search-box: 35px;
   --hi-appliances-header: 150px;
+
+  --size-pagetop: 5rem;
 
   /* バナーサイズ */
   --bn-wd-rectangle: 336px;

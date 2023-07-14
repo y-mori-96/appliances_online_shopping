@@ -10,8 +10,8 @@
 
 .pagetop a {
   display: block;
-  width: 100px;
-  height: 100px;
+  width: var(--size-pagetop);
+  height: var(--size-pagetop);
   background-color: var(--col-mian);
   border-radius: 50%;
   box-shadow: var(--box-shadow);
@@ -21,7 +21,7 @@
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
-  line-height: 100px;
+  line-height: var(--size-pagetop);
 }
 
 @media screen and (max-width: 559px) {

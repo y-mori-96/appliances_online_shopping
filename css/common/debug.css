@@ -20,13 +20,6 @@ main .appliances,
   /* display: none; */
 }
 
-.recommendation .img_wrapper,
-.feature .img_wrapper {
-  /* border: 1px solid #000; */
-}
-
-/* console.log("true"); */
-
 .nav_item {
   /* background-color: #000; */
 }

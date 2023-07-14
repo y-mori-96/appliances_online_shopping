@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow,noarchive" />
   <title>家電通販サイト</title>
 
   <!-- CSS -->
@@ -14,9 +15,8 @@
   <link rel="stylesheet" href="css/layout/h_cagegory_nav.css">
   <link rel="stylesheet" href="css/layout/footer.css">
   <link rel="stylesheet" href="css/top_page/top_page.css">
-  <link rel="stylesheet" href="css/top_page/slider.css">
+  <link rel="stylesheet" href="css/top_page/hero.css">
   <link rel="stylesheet" href="css/top_page/recommend.css">
-  <link rel="stylesheet" href="css/top_page/feature.css">
   <link rel="stylesheet" href="css/list_page/appliances.css">
   <link rel="stylesheet" href="css/list_page/search.css">
   <link rel="stylesheet" href="css/components/pagetop.css">
@@ -30,7 +30,6 @@
   <script src="js/top_pages/create_categories.js" defer></script>
   <script src="js/top_pages/slider.js" defer></script>
   <script src="js/top_pages/create_recommend.js" defer></script>
-  <script src="js/top_pages/create_feature.js" defer></script>
   <script src="js/list_page/nav_open_category.js" defer></script>
   <script src="js/list_page/create_appliances.js" defer></script>
   <script src="js/list_page/search_manufacturer_btn.js" defer></script>
@@ -167,44 +166,44 @@
 
   <main>
     <article id="top_page" class="top_page">
-      <img src="images/slider_.png" alt="">
-      <img src="images/slider_2.png" alt="">
-      <img src="images/slider_3.png" alt="">
-      <!-- <section id="top_slider" class="slider">
-        <ul>
-          <li>
-            <a href="#">
-              <img src="images/cleaner.jpg" alt="">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="images/rice_cooker.jpg" alt="">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="images/microwave.jpg" alt="">
-            </a>
-          </li>
-        </ul>
-        <button id="prev_btn" class="prev_btn">
-          <p>&lt;</p>
-        </button>
-        <button id="next_btn" class="next_btn">
-          <p>&gt;</p>
-        </button>
-      </section> -->
+      <section class="hero">
+        <div id="top_slider" class="top_slider">
+          <ul>
+            <li>
+              <a href="#">
+                <img src="images/new_life_campaign.png" alt="新生活応援キャンペーン">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/rice_cookers_feature.png" alt="炊飯器特集">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/camera_fair.png" alt="カメラ・レンズフェア">
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="indicator">
+          <div id="dot_indicator" class="dot_indicator">
+            <ul>
+              <!-- ここにインジゲーター挿入 -->
+            </ul>
+          </div>
+          <div class="btn_indicator">
+            <button id="previous_btn" class="previous_btn">&lt;</button>
+            <button id="next_btn" class="next_btn">&gt;</button>
+          </div>
+        </div>
+      </section>
+
       <section class="recommend">
         <h2 class="title">おすすめ商品</h2>
         <div class="container">
           <!-- ここに「recommend_data.json」追加 -->
-        </div>
-      </section>
-      <section class="feature">
-        <h2 class="title">特集</h2>
-        <div class="container">
-          <!-- ここに「feature_data.json」追加 -->
         </div>
       </section>
     </article>

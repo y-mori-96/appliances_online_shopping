@@ -4,7 +4,6 @@ $(function () {
   createCategories();
   slider();
   createRecommend();
-  createFeature();
 
   // 製品リストページ
   createAppliances();

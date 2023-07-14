@@ -1,0 +1,68 @@
+[
+  {
+    "category": "cook",
+    "name": "炊飯器",
+    "genre": "rice_cooker",
+    "image": "images/rice_cooker.jpg"
+  },
+  {
+    "category": "cook",
+    "name": "冷蔵庫",
+    "genre": "refrigerator",
+    "image": "images/refrigerator.jpg"
+  },
+  {
+    "category": "cook",
+    "name": "電子レンジ",
+    "genre": "microwave",
+    "image": "images/microwave.jpg"
+  },
+  {
+    "category": "cook",
+    "name": "トースター",
+    "genre": "toaster",
+    "image": "images/toaster.jpg"
+  },
+  {
+    "category": "life",
+    "name": "掃除機",
+    "genre": "cleaner",
+    "image": "images/cleaner.jpg"
+  },
+  {
+    "category": "life",
+    "name": "洗濯機・乾燥機",
+    "genre": "laundry",
+    "image": "images/laundry.png"
+  },
+  {
+    "category": "season",
+    "name": "エアコン",
+    "genre": "air_conditioner",
+    "image": "images/air_conditioner.jpg"
+  },
+  {
+    "category": "season",
+    "name": "扇風機",
+    "genre": "fan",
+    "image": "images/fan.png"
+  },
+  {
+    "category": "beauty",
+    "name": "ドライヤー",
+    "genre": "hairdryer",
+    "image": "images/hairdryer.jpg"
+  },
+  {
+    "category": "tv",
+    "name": "テレビ",
+    "genre": "tv",
+    "image": "images/tv.jpg"
+  },
+  {
+    "category": "tv",
+    "name": "ブルーレイ",
+    "genre": "blu_ray",
+    "image": "images/blu_ray.jpg"
+  }
+]

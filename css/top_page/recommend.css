@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+.recommend .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1.3rem;
+}
+
+.recommend .img_wrapper {
+  display: block;
+  width: var(--bn-wd-rectangle);
+  height: auto;
+  margin: 0 auto;
+}
+
+.recommend img {
+  width: 100%;
+  min-width: 100%;
+}

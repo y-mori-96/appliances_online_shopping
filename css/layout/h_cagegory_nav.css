@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+.nav_bar {
+  height: var(--hi-nav);
+  background-color: var(--col-gray);
+  margin-bottom: var(--mb-contents);
+}
+
+.nav_wrapper {
+  height: var(--hi-nav);
+  position: relative;
+  z-index: 1;
+}
+
+.open_nav_btn {
+  width: var(--wd-nav);
+  height: 100%;
+}
+
+.open_nav_btn>button {
+  width: 100%;
+  height: 100%;
+
+  text-align: center;
+  color: var(--col-white);
+  font-weight: bold;
+  font-size: var(--fs-open-nav-btn);
+  background-color: var(--col-second);
+}
+
+.nav_lists {
+  width: var(--wd-nav);
+}
+
+.nav_item {
+  width: 100%;
+  height: var(--hi-nav);
+  background-color: var(--col-gray);
+  border-top: var(--border);
+
+  line-height: var(--hi-nav);
+  text-align: center;
+  color: var(--col-black);
+}
+
+.nav_item h3,
+.nav_item h3 button {
+  width: 100%;
+  height: 100%;
+}
+
+.nav_item:last-of-type {
+  border-bottom: var(--border);
+}
+
+.genreDisplay {
+  position: absolute;
+  top: var(--hi-nav);
+  left: var(--wd-nav);
+  width: calc(100% - var(--wd-nav));
+  height: var(--hi-genre-display);
+  overflow-y: scroll;
+  border: var(--border-gray);
+  background-color: var(--col-white);
+}
+
+.category_lists {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  color: #000;
+  text-align: center;
+  padding: 2rem;
+}
+
+.genre {
+  width: 100%;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.genre>button {
+  width: 100%;
+  cursor: pointer;
+}
+
+.genre .header {
+  width: var(--wd-genre-header);
+  height: var(--wd-genre-header);
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 auto 1rem auto;
+  object-fit: fill;
+}
+
+.genre .header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+header .wrapper .contents {
+  margin: 0 0 0 auto;
+}
+
+
+@media screen and (max-width: 767px) {
+  .category_lists {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .category_lists {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .genreDisplay {
+    position: absolute;
+    left: var(--wd-mb-nav);
+    width: calc(100% - var(--wd-mb-nav));
+  }
+
+  .open_nav_btn {
+    width: var(--wd-mb-nav);
+  }
+
+  .nav_lists {
+    width: var(--wd-mb-nav);
+  }
+
+  .nav_item h3 button {
+    font-size: 0.8rem;
+  }
+
+  .genre .body h4 {
+    font-size: 1.1rem;
+  }
+}

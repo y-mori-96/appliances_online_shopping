@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+.company_bar {
+  background-color: var(--col-mian);
+  height: var(--hi-header);
+}
+
+header .company {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.company_nav {
+  margin: 0 0 0 auto;
+}
+
+header .company .logo {
+  height: 100%;
+}
+
+header h1 {
+  height: 100%;
+  line-height: var(--hi-header);
+  text-align: center;
+  font-size: var(--fs-h1);
+  font-weight: bold;
+  color: #fff;
+}
+
+header h1 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.company_nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  color: var(--col-white);
+}
+
+.company_nav ul li a {
+  display: block;
+  width: 100%;
+}
+
+/* hamburger
+******************************/
+.hamburger {
+  display: none;
+
+  width: 40px;
+  height: 32px;
+
+  position: relative;
+
+  margin: 0 0 0 auto;
+}
+
+.hamburger_bar {
+  position: absolute;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+
+  background: var(--col-white);
+}
+
+.hamburger_bar:nth-child(1) {
+  top: 0;
+  transform: rotate(0deg);
+  transition: 0.3s;
+}
+
+.hamburger_bar:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  /* 中心軸が基準のため半分戻す */
+  transition: 0.3s;
+}
+
+.hamburger_bar:nth-child(3) {
+  top: 100%;
+  transform: translateY(-100%) rotate(0deg);
+  /* translateY */
+  /* 中心軸が基準のため親要素にすべて含めたい */
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 767px) {
+  header .company {
+    position: relative;
+  }
+
+  .company_nav {
+    position: absolute;
+    top: calc(var(--hi-header));
+    z-index: 2;
+    right: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow-x: hidden;
+  }
+
+  .company_nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 0;
+
+    position: relative;
+    right: -100%;
+
+    transition: all .3s linear
+  }
+
+  .company_nav ul.active {
+    right: 0;
+  }
+
+  .company_nav ul li {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background-color: var(--col-second);
+    border: var(--border-white);
+  }
+
+  .company_nav ul li a {
+    color: #fff;
+  }
+
+  .company_nav ul li a:hover {
+    background-color: var(--col-md-nav-hover);
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger_bar.active:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    transition: 0.3s;
+  }
+
+  .hamburger_bar.active:nth-child(2) {
+    opacity: 0;
+    transition: 0.3s;
+  }
+
+  .hamburger_bar.active:nth-child(3) {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    transition: 0.3s;
+  }
+}

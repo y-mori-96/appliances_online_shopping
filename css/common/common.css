@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+:root {
+  /* color */
+  --col-white: #fff;
+  --col-gray: #f0f0f0;
+  --col-black: #000;
+  --col-black-tra: #00000033;
+  --col-mian: #8daab6;
+  --col-second: #b0c7d1;
+  --col-md-nav-hover: #ffffff33;
+
+  /* shadow */
+  --box-shadow: 0 0px 20px #00000033;
+
+  /* border */
+  --border-black: 1px solid #000;
+  --border: 1px solid #00000033;
+  --border-gray: 1px solid #f0f0f0;
+  --border-white: 1px solid #ffffff;
+
+  /* font-size */
+  --fs-h1: 2rem;
+  --fs-h2: 2rem;
+  --fs-mb-h2: 1.5rem;
+  --fs-sort-text: 1rem;
+  --fs-mb-sort-text: 0.8rem;
+  --fs-open-nav-btn: 1.5rem;
+  --fs-genre-li: 1.3rem;
+  --fs-appliances: 1rem;
+  --fs-appliances-price: 1.3rem;
+
+  /* margin-bottom */
+  --mb-contents: 2rem;
+  --mb-container: 1rem;
+
+  /* width */
+  --wd-body: 1200px;
+  --wd-main-container: 80%;
+  --wd-nav: 200px;
+  --wd-mb-nav: 100px;
+  --wd-category-btn: 200px;
+  --wd-tab-category-btn: 200px;
+  --wd-mb-category-btn: 200px;
+  --wd-genre-header: 130px;
+  /* height */
+  --hi-header: 70px;
+  --hi-nav: 50px;
+  --hi-mb-company-nav: 100px;
+  --hi-genre-li: 70px;
+  --hi-genre-button: 35px;
+  --hi-genre-display: 500px;
+  /* --hi-genre-hide: calc(-486px ); */
+  /* カテゴリの高さ - ヘッダーの高さ */
+  --hi-search-box: 35px;
+  --hi-appliances-header: 150px;
+
+  /* バナーサイズ */
+  --bn-wd-rectangle: 336px;
+  --bn-hi-rectangle: 280px;
+
+  --bn-pc-wd-nav: 450px;
+  --bn-tb-wd-nav: 320px;
+  --bn-mb-wd-nav: 200px;
+  --bn-hi-nav: 50px;
+
+}
+
+header .company,
+.nav_wrapper,
+.nav_bar_contents,
+main,
+.appliances,
+footer p {
+  width: var(--wd-body);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+body {
+  background-color: var(--col-white);
+}
+
+main {
+  min-height: calc(100vh - var(--hi-header));
+}
+
+.search {
+  margin-bottom: var(--mb-contents);
+}
+
+.pc-display {
+  display: block;
+}
+
+.tb-display {
+  display: none;
+}
+
+.mb-display {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .pc-display {
+    display: none;
+  }
+
+  .tb-display {
+    display: block;
+  }
+
+  .mb-display {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .pc-display {
+    display: none;
+  }
+
+  .tb-display {
+    display: none;
+  }
+
+  .mb-display {
+    display: block;
+  }
+}

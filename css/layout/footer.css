@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+footer {
+  background-color: var(--col-mian);
+}
+
+footer p {
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+}

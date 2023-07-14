@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+.nav_bar_contents {
+  position: relative;
+}
+
+.free_shipping {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.free_shipping img.pc-display {
+  width: var(--bn-pc-wd-nav);
+  height: var(--bn-hi-nav);
+}
+
+.free_shipping img.tb-display {
+  width: var(--bn-tb-wd-nav);
+  height: var(--bn-hi-nav);
+}
+
+.free_shipping img.mb-display {
+  width: var(--bn-mb-wd-nav);
+  height: var(--bn-hi-nav);
+}
+
+@media screen and (max-width: 559px) {
+  /* .free_shipping img {
+    width: 100%;
+  } */
+}

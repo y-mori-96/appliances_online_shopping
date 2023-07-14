@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+.top_page .title {
+  text-align: center;
+  font-size: var(--fs-h2);
+  margin-bottom: var(--mb-container);
+}
+
+.top_page section {
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 559px) {
+  .top_page .title {
+    font-size: var(--fs-mb-h2);
+  }
+}

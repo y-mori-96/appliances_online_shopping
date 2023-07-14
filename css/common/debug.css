@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+header,
+main .appliances,
+/* .genre, */
+/* .genre li, */
+.search .manufacturer ul li {
+  /* border: 1px solid #000; */
+}
+
+.search {
+  /* background-color: #e7c2c2; */
+}
+
+.manufacturer button.accordion {
+  /* background-color: #fac1fc; */
+}
+
+.test {
+  /* display: none; */
+}
+
+.recommendation .img_wrapper,
+.feature .img_wrapper {
+  /* border: 1px solid #000; */
+}
+
+/* console.log("true"); */
+
+.nav_item {
+  /* background-color: #000; */
+}
+
+.nav_item h3 {
+  /* background-color: #000; */
+}
+
+.nav_item h3 button {
+  /* background-color: #ddd; */
+  /* border: 1px solid #000; */
+  /* height: 50px; */
+}

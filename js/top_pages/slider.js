@@ -34,15 +34,15 @@ function slider() {
   // 「0」からスタートのため「-1」する
   const slideLength = dotIndicatorItems.length - OFFSET_SLIDE_LENGTH;
 
-  const SITE_SIZE = 1200;
-  const CHANGE_POSITON_LEFT = `-${SITE_SIZE}px`;
-  const MULTI_CHANGE_POSITON_LEFT = `-${SITE_SIZE * slideLength}px`;
+  const SITE_SIZE = 100;
+  const CHANGE_POSITON_LEFT = `-${SITE_SIZE}%`;
+  const MULTI_CHANGE_POSITON_LEFT = `-${SITE_SIZE * slideLength}%`;
 
-  const SINGLE_MOVE_LEFT = `-=${SITE_SIZE}px`;
-  const MULTI_MOVE_LEFT = `-=${SITE_SIZE * slideLength}px`;
+  const SINGLE_MOVE_LEFT = `-=${SITE_SIZE}%`;
+  const MULTI_MOVE_LEFT = `-=${SITE_SIZE * slideLength}%`;
 
-  const SINGLE_MOVE_RIGHT = `+=${SITE_SIZE}px`;
-  const MULTI_MOVE_RIGHT = `+=${SITE_SIZE * slideLength}px`;
+  const SINGLE_MOVE_RIGHT = `+=${SITE_SIZE}%`;
+  const MULTI_MOVE_RIGHT = `+=${SITE_SIZE * slideLength}%`;
 
   topSliderLists.prepend($("#top_slider li:last-of-type"));
   topSliderLists.css("left", CHANGE_POSITON_LEFT);

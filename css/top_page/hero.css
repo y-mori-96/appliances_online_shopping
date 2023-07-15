@@ -1,13 +1,18 @@
 @charset "UTF-8";
 
 .hero {
-  width: 100%;
+  /* width: 100%; */
+  width: 1000px;
+  margin: 0 auto;
 }
 .top_slider {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: var(--bn-hi-slider);
+  /* height: var(--bn-hi-slider); */
+  height: 535px;
+  overflow: hidden;
+
 
   margin-bottom: var(--mb-container);
 }
@@ -20,8 +25,9 @@
 }
 
 .top_slider ul li {
-  width: var(--wd-body);
-  height: 100%;
+  /* width: var(--wd-body); */
+  width: 1000px;
+  /* height: 535px; */
 }
 
 .top_slider ul li a {
@@ -32,6 +38,7 @@
 
 .top_slider ul li img {
   width: 100%;
+  height: 100%;
 }
 
 .indicator {
@@ -79,8 +86,8 @@
   gap: 2rem;
 }
 .dot_indicator ul li {
-  width: 2rem;
-  height: 2rem;
+  width: var(--size-indicator-dot);
+  height: var(--size-indicator-dot);
   border-radius: 50%;
   background-color: #ccc;
 }
@@ -92,4 +99,73 @@
   display: block;
   width: 100%;
   height: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero {
+    width: calc(767px - 24px);
+  }
+
+  .top_slider {
+    height: 388px;
+  }
+
+  .top_slider ul li {
+    width: calc(767px - 24px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .hero {
+    width: calc(559px - 24px);
+  }
+
+  .top_slider {
+    height: 278px;
+  }
+
+  .top_slider ul li {
+    width: calc(559px - 24px);
+  }
+}
+@media screen and (max-width: 559px) {
+  .hero {
+    width: calc(375px - 24px);
+  }
+
+  .top_slider {
+    height: 184px;
+  }
+
+  .top_slider ul li {
+    width: calc(375px - 24px);
+  }
+
+  .previous_btn {
+    width: var(--wi-mb-indicator-btn);
+    height: var(--hi-mb-indicator-btn);
+    font-size: 1rem;
+  }
+  .next_btn {
+    width: var(--wi-mb-indicator-btn);
+    height: var(--hi-mb-indicator-btn);
+    font-size: 1rem;
+  }
+  .dot_indicator ul li {
+    width: var(--size-mb-indicator-dot);
+    height: var(--size-mb-indicator-dot);
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .hero {
+    width: calc(320px - 24px);
+  }
+
+  .top_slider {
+    height: 154px;
+  }
+
+  .top_slider ul li {
+    width: calc(320px - 24px);
+  }
 }

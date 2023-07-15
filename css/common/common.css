@@ -63,7 +63,12 @@
   /* スライダー */
   --wi-indicator-btn: 4rem;
   --hi-indicator-btn: 3rem;
+  --wi-mb-indicator-btn: 2rem;
+  --hi-mb-indicator-btn: 1.5rem;
 
+  /* ドットインジゲーター */
+  --size-indicator-dot: 2rem;
+  --size-mb-indicator-dot: 1.5rem;
   /* ページトップ */
   --size-pagetop: 5rem;
 

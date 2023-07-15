@@ -1,17 +1,17 @@
 [
   {
     "title": "三菱電気　炊飯器",
-    "image": "images/recommend_rice_cooker.png",
+    "image": "images/recommend/rice_cooker.png",
     "link": "#"
   },
   {
     "title": "日立　掃除機",
-    "image": "images/recommend_cleaner.png",
+    "image": "images/recommend/cleaner.png",
     "link": "#"
   },
   {
     "title": "アラジン　トースター",
-    "image": "images/recommend_toaster.png",
+    "image": "images/recommend/toaster.png",
     "link": "#"
   }
 ]

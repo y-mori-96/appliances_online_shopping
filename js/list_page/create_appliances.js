@@ -43,22 +43,7 @@ function createAppliances() {
    */
   categoryLists.on('click', genreBtn, function (e) {
     getGenreValue = ($(e.target).parents(".genre").find("button").val());
-
-    // 検索
-    const filteredData = searchData(
-      keyword,
-      getMinValue,
-      getMaxValue,
-      getGenreValue,
-      getManufacturerValue
-    );
-
-    // ソート
-    const sortedData = sortData(filteredData, sortBy);
-
-    // データ作成
-    appliancesLists.empty();
-    createData(sortedData, appliancesLists);
+    createDataFlow();
   });
 
   /**
@@ -71,21 +56,7 @@ function createAppliances() {
     // ボタンの点灯処理
     changeActiveManufacturerBtn(manufacturerBtn, getManufacturerValue, getManufacturerClass);
 
-    // 検索
-    const filteredData = searchData(
-      keyword,
-      getMinValue,
-      getMaxValue,
-      getGenreValue,
-      getManufacturerValue
-    );
-
-    // ソート
-    const sortedData = sortData(filteredData, sortBy);
-
-    // データ作成
-    appliancesLists.empty();
-    createData(sortedData, appliancesLists);
+    createDataFlow();
   });
 
   /**
@@ -93,22 +64,7 @@ function createAppliances() {
    */
   keywordInput.on("input", function () {
     keyword = $(this).val().toLowerCase();
-
-    // 検索
-    const filteredData = searchData(
-      keyword,
-      getMinValue,
-      getMaxValue,
-      getGenreValue,
-      getManufacturerValue
-    );
-
-    // ソート
-    const sortedData = sortData(filteredData, sortBy);
-
-    // データ作成
-    appliancesLists.empty();
-    createData(sortedData, appliancesLists);
+    createDataFlow();
   });
 
   /**
@@ -116,22 +72,7 @@ function createAppliances() {
    */
   rangeMin.on("input", function () {
     getMinValue = parseInt(rangeMin.val());
-
-    // 検索
-    const filteredData = searchData(
-      keyword,
-      getMinValue,
-      getMaxValue,
-      getGenreValue,
-      getManufacturerValue
-    );
-
-    // ソート
-    const sortedData = sortData(filteredData, sortBy);
-
-    // データ作成
-    appliancesLists.empty();
-    createData(sortedData, appliancesLists);
+    createDataFlow();
   });
 
   /**
@@ -139,22 +80,7 @@ function createAppliances() {
    */
   rangeMax.on("input", function () {
     getMaxValue = parseInt(rangeMax.val());
-
-    // 検索
-    const filteredData = searchData(
-      keyword,
-      getMinValue,
-      getMaxValue,
-      getGenreValue,
-      getManufacturerValue
-    );
-
-    // ソート
-    const sortedData = sortData(filteredData, sortBy);
-
-    // データ作成
-    appliancesLists.empty();
-    createData(sortedData, appliancesLists);
+    createDataFlow();
   });
 
   /**
@@ -162,22 +88,7 @@ function createAppliances() {
    */
   sortBtn.on("change", function () {
     sortBy = $(this).val();
-
-    // 検索
-    const filteredData = searchData(
-      keyword,
-      getMinValue,
-      getMaxValue,
-      getGenreValue,
-      getManufacturerValue
-    );
-
-    // ソート
-    const sortedData = sortData(filteredData, sortBy);
-
-    // データ作成
-    appliancesLists.empty();
-    createData(sortedData, appliancesLists);
+    createDataFlow();
   });
 
   /**
@@ -197,14 +108,15 @@ function createAppliances() {
     sortBy = "release_new";
     getManufacturerValue = "all";
 
+    createDataFlow();
+  });
+
+  /**
+   * データ作成フロー
+   */
+  function createDataFlow() {
     // 検索
-    const filteredData = searchData(
-      keyword,
-      getMinValue,
-      getMaxValue,
-      getGenreValue,
-      getManufacturerValue
-    );
+    const filteredData = searchData();
 
     // ソート
     const sortedData = sortData(filteredData, sortBy);
@@ -212,18 +124,12 @@ function createAppliances() {
     // データ作成
     appliancesLists.empty();
     createData(sortedData, appliancesLists);
-  });
+  }
 
   /**
    * 検索（条件にヒットする要素数取得）
    */
-  function searchData(
-    keyword,
-    getMinValue,
-    getMaxValue,
-    getGenreValue,
-    getManufacturerValue
-  ) {
+  function searchData() {
     const searchedData = data.filter(function (item) {
       const nameMatches = item.name.toLowerCase().includes(keyword);
       const typeMatches = item.type.toLowerCase().includes(keyword);

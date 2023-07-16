@@ -46,7 +46,7 @@ function slider() {
 
   topSliderLists.prepend($("#top_slider li:last-of-type"));
   topSliderLists.css("left", CHANGE_POSITON_LEFT);
-  timer = setInterval(sliderTimer, interval);
+  timer = setInterval(transitionSlider, interval);
 
   /**
    * 次へボタン押下処理
@@ -54,7 +54,7 @@ function slider() {
   nextBtn.on("click", function () {
     if (enableClickFlag === true) {
       slideDirection = "next";
-      restartTimer();
+      restartSlider();
     } else {
       // 処理禁止
     }
@@ -66,7 +66,7 @@ function slider() {
   previousBtn.on("click", function () {
     if (enableClickFlag === true) {
       slideDirection = "previous";
-      restartTimer();
+      restartSlider();
     } else {
       // 処理禁止
     }
@@ -92,7 +92,7 @@ function slider() {
         slideDirection = "multiPrevious";
       }
 
-      restartTimer();
+      restartSlider();
     } else {
       // 処理禁止
     }
@@ -101,7 +101,7 @@ function slider() {
   /**
    * 画像遷移
    */
-  function sliderTimer() {
+  function transitionSlider() {
     // アニメーション終了までクリック禁止
     enableClickFlag = false;
 
@@ -184,10 +184,10 @@ function slider() {
   /**
    * 画面遷移再開
    */
-  function restartTimer() {
+  function restartSlider() {
     clearInterval(timer);
-    timer = setInterval(sliderTimer, interval);
-    sliderTimer();
+    timer = setInterval(transitionSlider, interval);
+    transitionSlider();
   }
 
   /**
@@ -200,6 +200,7 @@ function slider() {
     updateCurrentIndex();
     updateDotIndicator();
     resetSlideDirection();
+    console.log(currentIndex);
   }
 
   /**
@@ -234,7 +235,8 @@ function slider() {
    * 参照値減少
    */
   function decrementCurrentIndex() {
-    if (currentIndex < 0) {
+    console.log(currentIndex);
+    if (currentIndex <= 0) {
       currentIndex = slideLength;
     } else {
       --currentIndex;

@@ -97,7 +97,7 @@ function createAppliances() {
   clearBtn.on("click", function () {
     keywordInput.val("");
     rangeMin.val("");
-    rangeMin.val("");
+    rangeMax.val("");
     sortBtn.val("release_new");
     manufacturerBtn.addClass("active");
 

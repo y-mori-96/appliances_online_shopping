@@ -1,9 +1,9 @@
 function hamburger() {
   const hamburger = $(".hamburger");
-  const navLists = $(".company_nav ul");
+  const nav = $(".company_nav");
 
   hamburger.click(function () {
     $(this).find(".hamburger_bar").toggleClass("active");
-    navLists.toggleClass("active");
+    nav.toggleClass("active");
   });
 }

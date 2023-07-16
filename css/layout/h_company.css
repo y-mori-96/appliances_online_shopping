@@ -94,15 +94,21 @@ header h1 a {
 @media screen and (max-width: 767px) {
   header .company {
     position: relative;
+    overflow-x: hidden;
   }
 
   .company_nav {
-    position: absolute;
+    position: fixed;
     top: calc(var(--hi-header));
-    right: 0;
+    right: -100%;
     width: 100%;
     height: 100vh;
-    overflow-x: hidden;
+
+    z-index: 2;
+    transition: all .3s linear;
+  }
+  .company_nav.active {
+    right: 0;
   }
 
   .company_nav ul {
@@ -111,16 +117,6 @@ header h1 a {
     justify-content: space-between;
     flex-direction: column;
     gap: 0;
-
-    position: relative;
-    right: -100%;
-
-    z-index: 2;
-    transition: all .3s linear;
-  }
-
-  .company_nav ul.active {
-    right: 0;
   }
 
   .company_nav ul li {

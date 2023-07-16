@@ -191,7 +191,7 @@ function createAppliances() {
     const length = sortedData.length;
     // console.log(length);
     // 数を制限する
-    const limitLength = Math.min(length, 20);
+    const limitLength = Math.min(length, 8);
 
     let appliance = "";
 

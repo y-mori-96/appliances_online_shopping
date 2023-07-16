@@ -200,7 +200,6 @@ function slider() {
     updateCurrentIndex();
     updateDotIndicator();
     resetSlideDirection();
-    console.log(currentIndex);
   }
 
   /**
@@ -235,7 +234,6 @@ function slider() {
    * 参照値減少
    */
   function decrementCurrentIndex() {
-    console.log(currentIndex);
     if (currentIndex <= 0) {
       currentIndex = slideLength;
     } else {

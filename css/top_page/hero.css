@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 .hero {
-  /* width: 100%; */
   width: 1000px;
   margin: 0 auto;
 }
@@ -9,7 +8,6 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  /* height: var(--bn-hi-slider); */
   height: 535px;
   overflow: hidden;
 
@@ -25,9 +23,7 @@
 }
 
 .top_slider ul li {
-  /* width: var(--wd-body); */
   width: 1000px;
-  /* height: 535px; */
 }
 
 .top_slider ul li a {

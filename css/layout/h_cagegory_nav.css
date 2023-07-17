@@ -40,10 +40,6 @@
 
   display: flex;
   align-items: start;
-
-  border-right: var(--border-gray);
-  border-bottom: var(--border-gray);
-  border-left: var(--border-gray);
 }
 
 .nav_lists {
@@ -78,8 +74,9 @@
   overflow-y: scroll;
   background-color: var(--col-white);
   padding: 2rem 1rem;
+  border-right: var(--border-gray);
+  border-bottom: var(--border-gray);
 }
-
 
 .category_lists {
   display: grid;
@@ -112,7 +109,6 @@
   border-radius: 50%;
   background-color: #fff;
   margin: 0 auto var(--mb-container) auto;
-  object-fit: fill;
 }
 
 .genre .header img {
@@ -133,8 +129,6 @@
   }
 
   .genreDisplay {
-    position: absolute;
-    left: var(--wd-mb-nav);
     width: calc(100% - var(--wd-mb-nav));
   }
 

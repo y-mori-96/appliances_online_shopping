@@ -1,15 +1,21 @@
 @charset "UTF-8";
 
-.nav_bar {
-  height: var(--hi-nav);
-  background-color: var(--col-gray);
+.category_wrapper {
   margin-bottom: var(--mb-contents);
 }
 
-.nav_wrapper {
+.category_nav_bar {
   height: var(--hi-nav);
-  position: relative;
-  z-index: 1;
+  background-color: var(--col-gray);
+}
+
+.category_nav_bar_contents {
+  /* 横幅は「common.css」で一元管理 */
+  height: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .open_nav_btn {
@@ -27,18 +33,35 @@
   font-size: var(--fs-open-nav-btn);
   background-color: var(--col-second);
 }
+.category_lists_wrapper {
+  /* 横幅は「common.css」で一元管理 */
+  /* height: calc(100% - var(--hi-nav)); */
+  height: var(--hi-genre-display);
+
+  display: flex;
+  align-items: start;
+
+  border-right: var(--border-gray);
+  border-bottom: var(--border-gray);
+  border-left: var(--border-gray);
+}
 
 .nav_lists {
   width: var(--wd-nav);
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .nav_item {
   width: 100%;
-  height: var(--hi-nav);
+  height: 100%;
   background-color: var(--col-gray);
   border-top: var(--border);
 
-  line-height: var(--hi-nav);
   text-align: center;
   color: var(--col-black);
 }
@@ -49,20 +72,14 @@
   height: 100%;
 }
 
-.nav_item:last-of-type {
-  border-bottom: var(--border);
+.genreDisplay {
+  width: calc(100% - var(--wd-nav));
+  height: 100%;
+  overflow-y: scroll;
+  background-color: var(--col-white);
+  padding: 2rem 1rem;
 }
 
-.genreDisplay {
-  position: absolute;
-  top: var(--hi-nav);
-  left: var(--wd-nav);
-  width: calc(100% - var(--wd-nav));
-  height: var(--hi-genre-display);
-  overflow-y: scroll;
-  border: var(--border-gray);
-  background-color: var(--col-white);
-}
 
 .category_lists {
   display: grid;
@@ -71,7 +88,6 @@
 
   color: var(--col-black);
   text-align: center;
-  padding: 2rem;
 }
 
 .genre {
@@ -83,6 +99,10 @@
 .genre>button {
   width: 100%;
   cursor: pointer;
+}
+
+.genre>button:hover {
+  transform: scale(1.1);
 }
 
 .genre .header {
@@ -100,11 +120,6 @@
   height: 100%;
   object-fit: cover;
 }
-
-header .wrapper .contents {
-  margin: 0 0 0 auto;
-}
-
 
 @media screen and (max-width: 767px) {
   .category_lists {

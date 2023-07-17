@@ -78,6 +78,9 @@
   .appliances .container ul {
     grid-template-columns: repeat(2, 1fr);
   }
+  .nothing_appliance {
+    font-size: 2.5rem;
+  }
 }
 @media screen and (max-width: 559px) {
   .appliances .container ul {
@@ -86,5 +89,8 @@
   .appliances .container ul li {
     width: 300px;
     margin: 0 auto;
+  }
+  .nothing_appliance {
+    font-size: 1.5rem;
   }
 }

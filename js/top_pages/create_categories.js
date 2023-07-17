@@ -36,10 +36,6 @@ function createCategories() {
       else {
       }
     }
-
-    // 初期状態：非表示
-    categoryLists.hide();
-
     // カテゴリボタン押下時の処理
     navOpenCategory();
   })

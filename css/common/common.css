@@ -88,7 +88,8 @@
 
 header .company,
 .nav_wrapper,
-.nav_bar_contents,
+.category_nav_bar_contents,
+.category_lists_wrapper,
 main,
 .appliances,
 footer p {

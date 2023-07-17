@@ -106,6 +106,22 @@ function navOpenCategory() {
   }
 
   /**
+   * クリック処理
+   */
+  categoryLists.on('click', function () {
+    topPage.hide();
+    listPage.show();
+    allClearCategoryLists();
+  });
+
+
+  logo.on('click', function () {
+    listPage.hide();
+    topPage.show();
+    allClearCategoryLists();
+  });
+
+  /**
    * ナビクリア処理
    */
   function allClearCategoryLists() {
@@ -115,18 +131,4 @@ function navOpenCategory() {
     genreDisplay.hide();
     categoryLists.hide();
   }
-
-  /**
-   * クリック処理
-   */
-  categoryLists.on('click', function () {
-    topPage.hide();
-    listPage.show();
-  });
-
-
-  logo.on('click', function () {
-    listPage.hide();
-    topPage.show();
-  });
 }

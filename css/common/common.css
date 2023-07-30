@@ -123,6 +123,12 @@ main {
 }
 
 @media screen and (max-width: 767px) {
+  .no_scroll.active {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
   .pc-display {
     display: none;
   }
